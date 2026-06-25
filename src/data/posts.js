@@ -150,7 +150,7 @@ export const posts = [
   slug: 'project-tech-stack-guide',
   title: '项目技术栈与使用说明',
   excerpt: '介绍项目中用到的 Vue 3、Vue Router、localStorage 和 GitHub Actions。',
-  cover: 'url("images/covers/tech-stack.svg") center/cover',
+  cover: 'url("images/covers/notes.svg") center/cover',
   date: '2026-05-06',
   readTime: 6,
   featured: false,
