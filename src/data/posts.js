@@ -32,7 +32,7 @@ export const posts = [
       },
       {
         heading: '部署思路',
-        body: '运行 npm run build 后会生成 dist 目录。项目内置 GitHub Actions 配置，推送到 main 分支后可以自动发布到 GitHub Pages。'
+        body: '项目内置 GitHub Actions 配置，推送到 main 分支后可以自动发布到 GitHub Pages。'
       }
     ]
   },
@@ -64,7 +64,7 @@ export const posts = [
   {
     id: 3,
     slug: 'front-end-performance-checklist',
-    title: '前端性能优化清单：个人项目也值得认真做',
+    title: '前端性能优化清单',
     excerpt: '图片、路由、首屏、CSS 动效、构建产物，这些小细节会明显影响博客质感。',
     cover: 'url("images/covers/static.svg") center/cover',
     date: '2026-05-29',
@@ -74,15 +74,15 @@ export const posts = [
     content: [
       {
         heading: '控制首屏资源',
-        body: '首页不要加载过多图片和第三方脚本。这个模板使用本地 SVG 图片作为封面，比大图更轻，也更容易替换成自己的风格。'
+        body: '首页不要加载过多图片和第三方脚本。'
       },
       {
         heading: '合理使用动效',
-        body: '动效要服务于信息层级，不要抢正文注意力。卡片 hover、按钮反馈、页面进入过渡都保持轻量。'
+        body: '动效要服务于信息层级，不抢正文注意力。'
       },
       {
         heading: '构建后检查',
-        body: '检查 dist 目录是否正常生成。上线后打开浏览器控制台，确认没有资源路径错误。'
+        body: '检查 dist 目录是否正常生成。'
       }
     ]
   },
@@ -91,7 +91,7 @@ export const posts = [
     id: 4,
     slug: 'deploy-vue-to-github-pages',
     title: '把 Vue 项目部署到 GitHub Pages 的常见坑',
-    excerpt: 'publicPath、路由模式、Actions 权限、仓库 Pages 设置，是最容易卡住的几个点。',
+    excerpt: 'publicPath、路由模式、Actions 权限、仓库 Pages 设置。',
     cover: 'url("images/covers/deploy.svg") center/cover',
     date: '2026-04-30',
     readTime: 8,
@@ -104,7 +104,7 @@ export const posts = [
       },
       {
         heading: '路由刷新问题',
-        body: 'GitHub Pages 是静态托管，不会帮你把任意路径回退到 index.html。使用 hash 路由最省心，URL 会带 #，但部署稳定。'
+        body: 'GitHub Pages 是静态托管，不会把任意路径回退到 index.html。'
       },
       {
         heading: '自动发布',
@@ -144,7 +144,45 @@ export const posts = [
     body: '文章列表加载时显示骨架屏，使用 CSS 渐变条纹动画模拟内容占位，避免页面内容突变带来的视觉跳跃。'
   }
 ]
-  }
+  },
+{
+  id: 6,
+  slug: 'project-tech-stack-guide',
+  title: '项目技术栈与使用说明',
+  excerpt: '介绍项目中用到的 Vue 3、Vue Router、localStorage 和 GitHub Actions。',
+  cover: 'url("images/covers/tech-stack.svg") center/cover',
+  date: '2026-05-06',
+  readTime: 6,
+  featured: false,
+  tags: ['Vue 3', 'Vue Router', '技术栈'],
+  content: [
+    {
+      heading: 'Vue 3',
+      body: '项目使用 Vue 3 编写页面和组件。文章列表、搜索框、标签筛选、主题切换等功能都由 Vue 的响应式数据控制。修改页面内容时，主要查看 src 目录中的组件文件。'
+    },
+    {
+      heading: 'Vue Router',
+      body: 'Vue Router 负责页面之间的跳转，例如从首页进入文章详情页。当前项目使用 Hash 路由，因此地址中会带有 #，这种方式部署到 GitHub Pages 后比较稳定，也不容易遇到刷新页面后出现 404 的问题。'
+    },
+    {
+      heading: '本地数据保存',
+      body: '浏览量、点赞、评论和主题模式保存在浏览器的 localStorage 中。这些数据只存在当前浏览器里，清理浏览器缓存或更换设备后不会保留。'
+    },
+    {
+      heading: '样式与静态资源',
+      body: '页面样式由 CSS 文件控制，图片放在 public 目录中。文章封面可以使用本地图片，也可以填写网络图片地址。修改图片路径后，需要确认 GitHub Pages 上的访问路径是否正确。'
+    },
+    {
+      heading: '项目启动',
+      body: '进入项目目录后，先运行 npm install 安装依赖，再运行 npm run serve 启动本地开发环境。完成修改后，可以运行 npm run build 检查项目是否能够正常打包。'
+    },
+    {
+      heading: '自动部署',
+      body: '项目通过 GitHub Actions 发布到 GitHub Pages。代码推送到 main 分支后，工作流会自动安装依赖、执行构建，并把 dist 目录中的文件发布到网站。'
+    }
+  ]
+}
+
 ]
 
 export function getPostBySlug(slug) {
