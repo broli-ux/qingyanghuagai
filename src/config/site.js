@@ -4,9 +4,9 @@ export const siteConfig = {
   githubUrl: 'https://github.com/',
 
   background: {
-    image: 'url("https://broli-ux.github.io/qingyanghuagai/images/backgrounds/study-desk.svg")',
-    opacity: 0.75,
-    overlayOpacity: 0.2,
+    image: `url("${process.env.BASE_URL}images/backgrounds/study-desk.svg")`,
+    opacity: 1,
+    overlayOpacity: 0,
     blur: 0,
     position: 'center center',
     size: 'cover',
