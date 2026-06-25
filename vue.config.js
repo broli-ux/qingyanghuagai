@@ -2,9 +2,10 @@ const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production'
-    ? (process.env.VUE_APP_PUBLIC_PATH || './')
-    : '/',
+  publicPath:
+    process.env.NODE_ENV === 'production'
+      ? '/qingyanghuagai/'
+      : '/'
   productionSourceMap: false,
   chainWebpack: config => {
     config.plugin('html').tap(args => {
