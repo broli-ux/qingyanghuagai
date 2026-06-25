@@ -5,7 +5,7 @@ module.exports = defineConfig({
   publicPath:
     process.env.NODE_ENV === 'production'
       ? '/qingyanghuagai/'
-      : '/'，
+      : '/',
   productionSourceMap: false,
   chainWebpack: config => {
     config.plugin('html').tap(args => {
