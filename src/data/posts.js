@@ -15,7 +15,7 @@ export const posts = [
     id: 1,
     slug: 'vue-cli-blog-from-zero',
     title: '从 0 到 1 搭建一个 Vue CLI 动态博客',
-    excerpt: '用 Vue Router、组件化结构和本地数据源快速搭建一个可部署到 GitHub Pages 的个人博客。',
+    excerpt: '用 Vue Router、组件化结构和本地数据源搭建一个个人博客。',
     cover: 'url("images/covers/vue.svg") center/cover',
     date: '2026-06-18',
     readTime: 6,
@@ -24,15 +24,15 @@ export const posts = [
     content: [
       {
         heading: '为什么选择 Vue CLI',
-        body: 'Vue CLI 对初学者非常友好，目录结构清晰，构建命令稳定，适合快速做一个个人主页、博客或作品集。这个模板默认使用 hash 路由，可以减少 GitHub Pages 刷新页面 404 的问题。'
+        body: 'Vue CLI 对初学者非常友好，目录结构清晰，构建命令稳定，适合快速做一个个人主页、博客或作品集。'
       },
       {
         heading: '核心模块',
-        body: '博客由首页、文章详情页、关于页、搜索筛选、标签云、评论区和暗色模式组成。文章数据保存在 src/data/posts.js 中。'
+        body: '博客由首页、文章详情页、关于页、搜索筛选、标签云、评论区和暗色模式组成。'
       },
       {
         heading: '部署思路',
-        body: '项目内置 GitHub Actions 配置，推送到 main 分支后可以自动发布到 GitHub Pages。'
+        body: '项目内置 GitHub Actions 配置'
       }
     ]
   },
@@ -49,15 +49,15 @@ export const posts = [
     content: [
       {
         heading: '先确定栏目',
-        body: '建议把博客拆成 3 到 5 个固定栏目，例如技术笔记、项目复盘、工具分享、生活随笔。栏目稳定后，读者更容易理解你的内容定位。'
+        body: '建议把博客拆成 3 到 5 个固定栏目，例如技术笔记、项目复盘、工具分享、生活随笔。'
       },
       {
         heading: '文章模板化',
-        body: '每篇文章可以遵循固定结构：问题背景、解决过程、踩坑记录、最终方案、可复用清单。这样写作更快，也更适合搜索。'
+        body: '每篇文章可以遵循固定结构：问题背景、解决过程、踩坑记录、最终方案、可复用清单。'
       },
       {
         heading: '让首页动态起来',
-        body: '首页不只是展示文章，还可以根据标签、阅读量、精选状态和更新时间自动组织内容，让博客看起来更像一个活跃产品。'
+        body: '首页不只是展示文章，还可以根据标签、阅读量、精选状态和更新时间自动组织内容。'
       }
     ]
   },
@@ -100,7 +100,7 @@ export const posts = [
     content: [
       {
         heading: '路径问题',
-        body: '如果静态资源 404，通常是 publicPath 不对。这个模板默认生产环境使用 ./，多数项目页能直接工作；你也可以通过 VUE_APP_PUBLIC_PATH 指定仓库子路径。'
+        body: '如果静态资源 404，通常是 publicPath 不对。这个模板默认生产环境使用 ./，多数项目页能直接工作；'
       },
       {
         heading: '路由刷新问题',
@@ -108,7 +108,7 @@ export const posts = [
       },
       {
         heading: '自动发布',
-        body: '仓库 Settings → Pages 里把 Source 设为 GitHub Actions，然后推送 main 分支。工作流会安装依赖、构建项目并上传 dist。'
+        body: '仓库 Settings → Pages 里把 Source 设为 GitHub Actions，然后推送 main 分支。'
       }
     ]
   },
@@ -129,11 +129,11 @@ export const posts = [
   },
   {
     heading: '状态反馈',
-    body: '按钮 hover、标签选中、空状态提示、搜索结果数量，这些反馈让用户感觉页面是活的。使用 :hover 和 transition 添加平滑过渡即可。'
+    body: '按钮 hover、标签选中、空状态提示、搜索结果数量，这些反馈让用户感觉页面是活的。'
   },
   {
     heading: '移动端适配',
-    body: '博客最常被手机打开，移动端导航、卡片间距和字体大小必须认真处理。使用 clamp() 响应式字体和媒体查询断点做好适配。'
+    body: '博客最常被手机打开，移动端导航、卡片间距和字体大小必须认真处理。'
   },
   {
     heading: '暗黑模式',
